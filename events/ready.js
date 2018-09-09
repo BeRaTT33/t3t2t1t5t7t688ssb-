@@ -18,8 +18,8 @@ module.exports = client => {
 	var Games = [
         "TruvaBot|!!yardım|!!destek",
 		"!!anakomutlar !!eğlence !!yetkili",
-                "!!davet !!balıktut !!sigara",
-        `|${client.guilds.size} Sunucu |${client.users.size} Kulanıcı`
+                "Truva Bot Tekrardan Sizlerle...",
+        `|${client.guilds.size} Sunucu`
     ];
     setInterval(function() {
         var random = Math.floor(Math.random()*(Games.length-0+1)+0);
