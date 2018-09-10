@@ -15,8 +15,8 @@ exports.run = (client, message, args) => {
   client.unbanReason = reason;
   client.unbanAuth = message.author;
   let user = args[0];
-  let modlog = guild.channels.find('name', 'Yetkilikomut');
-  if (!modlog) return message.reply('`Yetkilikomut` kanalını bulamıyorum.');
+  let modlog = guild.channels.find('name', 'güvenlik');
+  if (!modlog) return message.reply('`güvenlik` kanalını bulamıyorum.');
   if (reason.length < 1) return message.reply('**Ban kaldırma sebebini belirtmedin!**');
   if (!user) return message.reply('**Banı kaldırılacak kişinin** **__ID__** **numarasını yazmalısın.**').catch(console.error);
   message.guild.unban(user);
