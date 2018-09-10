@@ -14,14 +14,14 @@ exports.run = (client, message, args) => {
   let user = message.mentions.users.first();
   let modlog = guild.channels.find('name', 'güvenlik');
   if (!modlog) return message.reply('`güvenlik` kanalını bulamıyorum.');
-  if (reason.length < 1) return message.reply('Ban sebebini yazmalısın.');
+  if (reason.length < 1) return message.reply('Kimi Banlayacagımı Ve Sebebını Yazmalısın.');
   if (message.mentions.users.size < 1) return message.reply('Kimi banlayacağını yazmalısın.').catch(console.error);
 
   if (!message.guild.member(user).bannable) return message.reply('Yetkilileri banlayamam.');
   message.guild.ban(user, 2);
 
   const embed = new Discord.RichEmbed()
-    .setColor(0x00AE86)
+    .setColor(0xff0000)
     .setTimestamp()
     .addField('Eylem:', 'Sunucudan Yasaklama :bangbang: ')
     .addField('Yasaklanan Kullanıcı:', `${user.username}#${user.discriminator} (${user.id})`)
