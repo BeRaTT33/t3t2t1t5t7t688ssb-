@@ -137,7 +137,7 @@ client.on("guildMemberAdd", async member => {
   let giriscikis = JSON.parse(fs.readFileSync("./giriscikis.json", "utf8"));  
 
   let embed = new Discord.RichEmbed()
-    .setTitle('Giriş Çıkış Sistemi')
+    .setTitle('TruvaBot')
     .setDescription(`📥 | ${member} Sunucuya katıldı.`)
     .setColor("GREEN")
     .setTimestamp()
@@ -162,7 +162,7 @@ client.on("guildMemberRemove", async member => {
   let giriscikis = JSON.parse(fs.readFileSync("./giriscikis.json", "utf8"));
 
   let embed = new Discord.RichEmbed()
-    .setTitle('Giriş Çıkış Sistemi')
+    .setTitle('TruvaBot')
     .setDescription(`📤 | ${member} Sunucudan Ayrıldı.`)
     .setColor("RED")
     .setTimestamp()
@@ -244,7 +244,7 @@ client.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
-            .addField("Bot Sahibi", `<@373904597703589888><@373827236299538443>`, true)
+            .addField("Bot Sahibi", `<@373904597703589888> /\ <@373827236299538443>`, true)
             .addField("Version", "2", true)
             .addField("Toplam Sunucu Sayısı", client.guilds.size, true)
             .addField("Toplam Kullanıcı Sayısı", client.users.size, true)
@@ -360,7 +360,7 @@ if (message.content.toLowerCase() === prefix + "ördek") {
 client.on("guildMemberAdd", async member => {
     let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
     const channel = member.guild.channels.find("name", "sayaç")
-    channel.send(`**${member.user.tag}** Katırldı 😎 ${sayac[member.guild.id].sayi} olmamıza son ${sayac[member.guild.id].sayi - member.guild.members.size} üye kaldı!`)
+    channel.send(`**${member.user.tag}** Katıldı 😎 ${sayac[member.guild.id].sayi} olmamıza son ${sayac[member.guild.id].sayi - member.guild.members.size} üye kaldı!`)
 })
 
 client.on("guildMemberRemove", async member => {
