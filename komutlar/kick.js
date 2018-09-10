@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
   let user = message.mentions.users.first();
   let modlog = guild.channels.find('name', 'güvenlik');
   if (!modlog) return message.reply(':warning: **Uyarı** :warning:', '`güvenlik` **adlı Kanal Bulunamadı!**');
-  if (reason.length < 1) return message.reply('Sunucudan atma sebebini yazmalısın.');
+  if (reason.length < 1) return message.reply('Kimi Sunucudan Atacağımı Ve Sebebini  Yazmalısın.');
   if (message.mentions.users.size < 1) return message.reply('Kimi sunucudan atacağını yazmalısın.').catch(console.error);
 
   if (!message.guild.member(user).kickable) return message.reply('Yetkilileri sunucudan atamam.');
